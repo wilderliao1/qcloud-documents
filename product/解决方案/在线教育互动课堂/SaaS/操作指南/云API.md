@@ -1,22 +1,41 @@
 [预约课堂](#11-预约课堂)
+
 [删除课堂](#12-删除)
+
 [修改课堂](#13-修改课堂信息)
+
 [查询课堂信息](#14-查询课堂信息)
+
 [创建账号](#21-创建账号)
+
 [修改账号信息](#22-修改账号信息)
+
 [更新账号票据](#23-更新账号票据)
+
 [查询用户详情](#24-查询用户详情)
+
 [查询用户列表](#25-查询用户列表)
+
 [添加课件](#31-添加课件)
+
 [删除课件](#32-删除课件)
+
 [查询课件信息](#33-查询课件信息)
+
 [查询课件列表](#34-查询课件列表)
+
 [回调格式模版](#41-回调格式模版)
+
 [老师开始上课](#42-老师开始上课)
+
 [老师确认下课](#43-老师确认下课)
+
 [在线录制开始](#44-在线录制开始)
+
 [在线录制结束](#45-在线录制结束)
+
 [H5转码进度回调](#46-H5转码进度回调)
+
 [附录](#附录)
 
 # 云API
@@ -68,38 +87,38 @@ __举例__
 request:
 ```
 {
-"expire_time": 1548296231,
-"teacher_id":"user_00",
-"class_topic": "课堂主题",
-"class_type":"public",
-"start_time": 1558350988,
-"stop_time": 1558350988,
-"members": [
-{
-"role": "student",
-"user_id": "user1"
-},
-{
-"role": "student",
-"user_id": "user2"
-}
-],
-"settings":{
-"record_types": ["local","remote"],
-}
-"record_user_id":"tic_record_user_1234_01",
-"record_user_sig": "user_sig"
+  "expire_time": 1548296231,
+  "teacher_id":"user_00",
+  "class_topic": "课堂主题",
+  "class_type":"public",
+  "start_time": 1558350988,
+  "stop_time": 1558350988,
+  "members": [
+    {
+    "role": "student",
+    "user_id": "user1"
+    },
+    {
+    "role": "student",
+    "user_id": "user2"
+    }
+  ],
+  "settings":{
+    "record_types": ["local","remote"],
+  }
+  "record_user_id":"tic_record_user_1234_01",
+  "record_user_sig": "user_sig"
 }
 ```
 
 response:
 ```
 {
-"error_code":0,
-"error_msg":"",
-"class_id":100012345,
-"teacher_url":"https://tedu.qcloudtrtc.com/1400127140/100012345/0",
-"student_url":"https://tedu.qcloudtrtc.com/1400127140/100012345/1",
+  "error_code":0,
+  "error_msg":"",
+  "class_id":100012345,
+  "teacher_url":"https://tedu.qcloudtrtc.com/1400127140/100012345/0",
+  "student_url":"https://tedu.qcloudtrtc.com/1400127140/100012345/1"
 }
 ```
 
@@ -133,8 +152,8 @@ request
 
 ```
 {
-"expire_time": 1548296231,
-"class_id": 100012345
+  "expire_time": 1548296231,
+  "class_id": 100012345
 }
 ```
 
@@ -142,8 +161,8 @@ response
 
 ```
 {
-"error_code":0,
-"error_msg":""
+  "error_code":0,
+  "error_msg":""
 }
 ```
 
@@ -174,10 +193,10 @@ request
 
 ```json
 {
-"expire_time": 1548296231,
-"class_id": 102304,
-"class_topic": "新的课堂主题",
-"stop_time": 1558351000,
+  "expire_time": 1548296231,
+  "class_id": 102304,
+  "class_topic": "新的课堂主题",
+  "stop_time": 1558351000
 }
 ```
 
@@ -185,8 +204,8 @@ response
 
 ```json
 {
-"error_code":0,
-"error_msg":"",
+  "error_code":0,
+  "error_msg":""
 }
 ```
 
@@ -242,8 +261,8 @@ request
 
 ```json
 {
-"expire_time": 1548296231，
-"class_id": 100012345
+  "expire_time": 1548296231，
+  "class_id": 100012345
 }
 ```
 
@@ -251,37 +270,37 @@ response
 
 ```json
 {
-"error_code": 0,
-"error_msg": "",
-"class_id": 100012345,
-"class_topic": "MyFirstClass",
-"class_type":"public",
-"class_status":"will",
-"teacher_id":"u1",
-"create_time": 1558350988,
-"start_time": 1558350990,
-"stop_time": 1558351000,
-"real_start_time": 1558350995,
-"real_stop_time": 1558350911,
-"member_count":30,
-"chat_group_id":"102304_chat",
-"cmd_group_id":"102304",
-"settings" : {
-"resolution": "1024x768",
-"fps": 20,
-"layout": 1,
-"record_types": ["remote"]
-},
-"members": [
-{
-"role": "student",
-"user_id": "user1"
-},
-{
-"role": "teacher",
-"user_id": "user2"
-}
-]
+  "error_code": 0,
+  "error_msg": "",
+  "class_id": 100012345,
+  "class_topic": "MyFirstClass",
+  "class_type":"public",
+  "class_status":"will",
+  "teacher_id":"u1",
+  "create_time": 1558350988,
+  "start_time": 1558350990,
+  "stop_time": 1558351000,
+  "real_start_time": 1558350995,
+  "real_stop_time": 1558350911,
+  "member_count":30,
+  "chat_group_id":"102304_chat",
+  "cmd_group_id":"102304",
+  "settings" : {
+    "resolution": "1024x768",
+    "fps": 20,
+    "layout": 1,
+    "record_types": ["remote"]
+  },
+  "members": [
+    {
+      "role": "student",
+      "user_id": "user1"
+    },
+    {
+      "role": "teacher",
+      "user_id": "user2"
+    }
+  ]
 }
 ```
 
@@ -322,13 +341,13 @@ __举例__
 request
 ```json
 {
-"expire_time": 1548296231,
-"index":0,
-"size":20,
-"user_id":"",
-"create_time_desc":true,
-"class_status": ["will","ing","end"],
-"class_type":["1vN"]
+  "expire_time": 1548296231,
+  "index":0,
+  "size":20,
+  "user_id":"",
+  "create_time_desc":true,
+  "class_status": ["will","ing","end"],
+  "class_type":["1vN"]
 }
 ```
 
@@ -336,22 +355,22 @@ response
 
 ```json
 {
-"error_code": 0,
-"error_msg": "",
-"finish":true,
-"total":1,
-"list": [
-{
-"class_id":100012345,
-"class_topic":"职场培训",
-"class_type":"1vN",
-"class_status":"will",
-"teacher_id":"u1",
-"create_time":1558350988,
-"start_time":1558350990,
-"stop_time":1558351000,
-}    
-]
+  "error_code": 0,
+  "error_msg": "",
+  "finish":true,
+  "total":1,
+  "list": [
+    {
+      "class_id":100012345,
+      "class_topic":"职场培训",
+      "class_type":"1vN",
+      "class_status":"will",
+      "teacher_id":"u1",
+      "create_time":1558350988,
+      "start_time":1558350990,
+      "stop_time":1558351000,
+    }    
+  ]
 }
 ```
 
@@ -395,18 +414,18 @@ request:
 
 ```
 {
-"expire_time": 1548296231,
-"list":[
-{
-"user_id":"xxxxx",
-"role":"student",
-"nickname":"小明",
-“gender”:"male",
-"avatar":"https://xxx/xiaoming.png", 
-"phone_no":"13033445566",
-"e_mail":"xxx@xx.com"
-}
-]
+  "expire_time": 1548296231,
+  "list":[
+    {
+      "user_id":"xxxxx",
+      "role":"student",
+      "nickname":"小明",
+      “gender”:"male",
+      "avatar":"https://xxx/xiaoming.png", 
+      "phone_no":"13033445566",
+      "e_mail":"xxx@xx.com"
+    }
+  ]
 }
 ```
 
@@ -414,15 +433,15 @@ response:
 
 ```
 {
-"error_code":0,
-"error_msg":"",
-"user_list":[
-{
-"user_id":"user1",
-"user_token":"1234578"
-}
-],
-"repeats":["xx","yy"]
+  "error_code":0,
+  "error_msg":"",
+  "user_list":[
+    {
+      "user_id":"user1",
+      "user_token":"1234578"
+    }
+  ],
+  "repeats":["xx","yy"]
 }
 ```
 
@@ -463,9 +482,9 @@ request
 
 ```
 {
-"expire_time": 1548296231,
-"user_id":"xxxx",
-"nickname":"新昵称"
+  "expire_time": 1548296231,
+  "user_id":"xxxx",
+  "nickname":"新昵称"
 }
 ```
 
@@ -473,8 +492,8 @@ response
 
 ```
 {
-"error_code":0,
-"error_msg":"",
+  "error_code":0,
+  "error_msg":""
 }
 ```
 
@@ -509,8 +528,8 @@ request
 
 ```
 {
-"expire_time": 1548296231,
-"user_id":"xxxx"
+  "expire_time": 1548296231,
+  "user_id":"xxxx"
 }
 ```
 
@@ -518,9 +537,9 @@ response
 
 ```
 {
-"error_code":0,
-"error_msg":"",
-"user_token":"新的票据"
+  "error_code":0,
+  "error_msg":"",
+  "user_token":"新的票据"
 }
 ```
 
@@ -563,8 +582,8 @@ request
 
 ```json
 {
-"expire_time": 1548296231,
-"user_id":"用户ID"
+  "expire_time": 1548296231,
+  "user_id":"用户ID"
 }
 ```
 
@@ -572,19 +591,19 @@ response
 
 ```json
 {
-"error_code":0,
-"error_msg":"",
-"user_info":{
-"user_id":"user1",
-"nickname":"user1_nickname",
-"gender":"male",
-"avatar":"https://xxxx/head.png",
-"role":"stduent",
-"phone_no":"15888667799",
-"e_mail":"xx@xx.com",
-"regist_time":1554786131,
-"update_time":1554786131
-}
+  "error_code":0,
+  "error_msg":"",
+  "user_info":{
+    "user_id":"user1",
+    "nickname":"user1_nickname",
+    "gender":"male",
+    "avatar":"https://xxxx/head.png",
+    "role":"stduent",
+    "phone_no":"15888667799",
+    "e_mail":"xx@xx.com",
+    "regist_time":1554786131,
+    "update_time":1554786131
+  }
 }
 ```
 
@@ -635,11 +654,11 @@ request
 
 ```json
 {
-"expire_time": 1548296231,
-"index":0,
-"size":10,
-"roles":["teacher"],
-"prefix":""
+  "expire_time": 1548296231,
+  "index":0,
+  "size":10,
+  "roles":["teacher"],
+  "prefix":""
 }
 ```
 
@@ -647,23 +666,23 @@ response
 
 ```json
 {
-"error_code":0,
-"error_msg":"",
-"total":1,
-"finish":true,
-"list":[
-{
-"user_id":"user1",
-"nickname":"user1_nickname",
-"gender":"male",
-"avatar":"https://xxxx/head.png",
-"role":"teacher",
-"phone_no":"15888667799",
-"e_mail":"xx@xx.com",
-"regist_time":1554786131,
-"update_time":1554786131
-}
-]
+  "error_code":0,
+  "error_msg":"",
+  "total":1,
+  "finish":true,
+  "list":[
+    {
+      "user_id":"user1",
+      "nickname":"user1_nickname",
+      "gender":"male",
+      "avatar":"https://xxxx/head.png",
+      "role":"teacher",
+      "phone_no":"15888667799",
+      "e_mail":"xx@xx.com",
+      "regist_time":1554786131,
+      "update_time":1554786131
+    }
+  ]
 }
 ```
 
@@ -705,15 +724,15 @@ request
 
 ```
 {
-"expire_time": 1548296231,
-"doc_url": "课件地址",
-"doc_name":"课件名字",
-"doc_ext": "ppt",
-"doc_size":1024,
-"doc_md5": "c4ca4238a0b923820dcc509a6f75849b",
-"permission":"private",
-"owner":"xxx",
-"is_transcode":false
+  "expire_time": 1548296231,
+  "doc_url": "课件地址",
+  "doc_name":"课件名字",
+  "doc_ext": "ppt",
+  "doc_size":1024,
+  "doc_md5": "c4ca4238a0b923820dcc509a6f75849b",
+  "permission":"private",
+  "owner":"xxx",
+  "is_transcode":false
 }
 ```
 
@@ -721,9 +740,9 @@ response
 
 ```
 {
-"error_code": 0,
-"error_msg": "",
-"doc_id":"sdfjdskljflkdsf"
+  "error_code": 0,
+  "error_msg": "",
+  "doc_id":"sdfjdskljflkdsf"
 }
 ```
 
@@ -755,11 +774,11 @@ request
 
 ```json
 {
-"expire_time": 1548296231,
-"doc_ids": [
-"doc_id_1",
-"doc_id_2"
-]
+  "expire_time": 1548296231,
+  "doc_ids": [
+    "doc_id_1",
+    "doc_id_2"
+  ]
 }
 ```
 
@@ -767,8 +786,8 @@ response
 
 ```json
 {
-"error_code": 0,
-"error_msg": ""
+  "error_code": 0,
+  "error_msg": ""
 }
 ```
 
@@ -815,8 +834,8 @@ request
 
 ```json
 {
-"expire_time": 1548296231,
-"doc_id": “ywyzhohnx”
+  "expire_time": 1548296231,
+  "doc_id": “ywyzhohnx”
 }
 ```
 
@@ -824,22 +843,22 @@ response
 
 ```json
 {
-"error_code": 0,
-"error_msg": "",
-"doc_id": "ywyzhohnx",
-"doc_name":"课件名字",
-"doc_url":"http://xxxx.ppt",
-"doc_ext": "ppt",
-"doc_md5": "c4ca4238a0b923820dcc509a6f75849b",
-"doc_size": 204800,
-"permission":"public",
-"owner": "ownerIdentifier",
-"upload_time": 1558350990,
-"is_transcode":false,
-"transcode_status":"",
-"transcode_code":0,
-"transcode_msg":"",
-"transcode_result":""
+  "error_code": 0,
+  "error_msg": "",
+  "doc_id": "ywyzhohnx",
+  "doc_name":"课件名字",
+  "doc_url":"http://xxxx.ppt",
+  "doc_ext": "ppt",
+  "doc_md5": "c4ca4238a0b923820dcc509a6f75849b",
+  "doc_size": 204800,
+  "permission":"public",
+  "owner": "ownerIdentifier",
+  "upload_time": 1558350990,
+  "is_transcode":false,
+  "transcode_status":"",
+  "transcode_code":0,
+  "transcode_msg":"",
+  "transcode_result":""
 }
 ```
 
@@ -880,13 +899,12 @@ request
 
 ```json
 {
-"expire_time": 1548296231,
-"index":0,
-"size":10,
-"owner":"",
-"prefix":"量子",
-"permissions":["public","private"]
-
+  "expire_time": 1548296231,
+  "index":0,
+  "size":10,
+  "owner":"",
+  "prefix":"量子",
+  "permissions":["public","private"]
 }
 ```
 
@@ -894,28 +912,28 @@ response
 
 ```json
 {
-"error_code": 0,
-"error_msg": "",
-"finish":true,
-"total":100,
-"list": [
-{
-"doc_id": "doc_id_1",
-"doc_name":"量子计算导论",
-"doc_url":"http://xxxx.ppt",
-"doc_ext": "ppt",
-"doc_md5": "c4ca4238a0b923820dcc509a6f75849b",
-"doc_size": 204800,
-"permission":"public",
-"owner": "ownerIdentifier",
-"upload_time": 1558350990,
-"is_transcode":true,
-"transcode_status":"wait",
-"transcode_code":0,
-"transcode_msg":"fail",
-"transcode_result":"url"
-}
-]
+  "error_code": 0,
+  "error_msg": "",
+  "finish":true,
+  "total":100,
+  "list": [
+    {
+      "doc_id": "doc_id_1",
+      "doc_name":"量子计算导论",
+      "doc_url":"http://xxxx.ppt",
+      "doc_ext": "ppt",
+      "doc_md5": "c4ca4238a0b923820dcc509a6f75849b",
+      "doc_size": 204800,
+      "permission":"public",
+      "owner": "ownerIdentifier",
+      "upload_time": 1558350990,
+      "is_transcode":true,
+      "transcode_status":"wait",
+      "transcode_code":0,
+      "transcode_msg":"fail",
+      "transcode_result":"url"
+    }
+  ]
 }
 ```
 
@@ -957,19 +975,19 @@ __举例__
 回调请求格式如下：
 ```
 {
-"expire_time":1548296231,
-"event":"class_begin",
-"data":{
-"class_id":100012345,
-"real_start_time":1558350988
-}
+  "expire_time":1548296231,
+  "event":"class_begin",
+  "data":{
+    "class_id":100012345,
+    "real_start_time":1558350988
+  }
 }
 ```
 
 响应包格式如下：
 ```
 {
-"error_code":0,
+  "error_code":0
 }
 ```
 
@@ -993,8 +1011,8 @@ __data__
 
 ```
 {
-"class_id":100012345,
-"real_start_time":1558350988
+  "class_id":100012345,
+  "real_start_time":1558350988
 }
 ```
 
@@ -1018,8 +1036,8 @@ __data__
 
 ```
 {
-"class_id":100012345,
-"real_stop_time":1558350988
+  "class_id":100012345,
+  "real_stop_time":1558350988
 }
 ```
 
@@ -1044,10 +1062,10 @@ __data__
 
 ```
 {
-"error_code":0,
-"error_msg":"",
-"class_id":100012345,
-"timestamp":1558350988
+  "error_code":0,
+  "error_msg":"",
+  "class_id":100012345,
+  "timestamp":1558350988
 }
 ```
 
@@ -1086,36 +1104,37 @@ VideoInfo对象格式
 
 ```
 {
-"error_code":0,
-"error_msg":"",
-"timestamp": 1529908745,
-"start_time": 1529908745,
-"stop_time": 1529908745,
-"class_id":100001234,
-"video_info":[
-{
-"video_play_time":0
-"video_size":1200,
-"video_format":"mp4",
-"video_duration":3600
-"video_url":"http://1253488539.vod2.myqcloud.com/oM86K7X3Ig8b.mp4",
-"video_id":"5285890781570653827",
-"video_type":0,
-"user_id":"ios_test1"
-},
-{
-"video_play_time":4000
-"video_size":3756,
-"video_format":"mp4",
-"video_duration":5000
-"video_url":"http://1253488539.vod2.myqcloud.com/oM86K7X3IsdfA.mp4",
-"video_id":"5285890781570653828",
-"video_type":2,
-"user_id":"pc_test1"
-}
-]
+  "error_code":0,
+  "error_msg":"",
+  "timestamp": 1529908745,
+  "start_time": 1529908745,
+  "stop_time": 1529908745,
+  "class_id":100001234,
+  "video_info":[
+    {
+      "video_play_time":0
+      "video_size":1200,
+      "video_format":"mp4",
+      "video_duration":3600
+      "video_url":"http://1253488539.vod2.myqcloud.com/oM86K7X3Ig8b.mp4",
+      "video_id":"5285890781570653827",
+      "video_type":0,
+      "user_id":"ios_test1"
+    },
+    {
+      "video_play_time":4000
+      "video_size":3756,
+      "video_format":"mp4",
+      "video_duration":5000
+      "video_url":"http://1253488539.vod2.myqcloud.com/oM86K7X3IsdfA.mp4",
+      "video_id":"5285890781570653828",
+      "video_type":2,
+      "user_id":"pc_test1"
+    }
+  ]
 }
 ```
+
 
 ### 4.6 H5转码进度回调
 
@@ -1143,14 +1162,14 @@ __data__
 
 ```
 {
-"error_code":0,
-"error_msg":"",
-"timestamp":100001234,
-"status":"finished",
-"progress": 50,
-"resolution": "1024x768",
-"pages": 20,
-"title": "PPT名字"
+  "error_code":0,
+  "error_msg":"",
+  "timestamp":100001234,
+  "status":"finished",
+  "progress": 50,
+  "resolution": "1024x768",
+  "pages": 20,
+  "title": "PPT名字"
 }
 ```
 
